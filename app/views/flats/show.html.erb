@@ -1,0 +1,23 @@
+<h1>hello</h1>
+
+<div class="container">
+  <div class="card w-50 mx-auto mt-4">
+    <img class="card-img-top" src="<%= @flat.picture %>" alt="Card image cap">
+    <div class="card-body pb-0">
+      <h5 class="card-title"><%= @flat.name %></h5>
+      <p class="card-text"><%= @flat.address %></p>
+      <div class="container d-flex p-0">
+        <p class="card-text ">
+          <i class="fas fa-user-friends p-2"></i><%= @flat.number_of_guests %>
+        </p>
+        <p class="card-text ml-auto"><%= @flat.price_per_night %>
+          <i class="fas fa-euro-sign"></i>
+        </p>
+      </div>
+    </div>
+    <div class="card-footer">
+      <%= link_to 'Back to Flats', flats_path %>
+    </div>
+  </div>
+</div>
+
