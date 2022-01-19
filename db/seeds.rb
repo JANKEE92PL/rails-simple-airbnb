@@ -5,6 +5,6 @@
     description:      Faker::Restaurant.description,
     price_per_night:  rand(1..100),
     number_of_guests: rand(1..5),
-    picture:          Unsplash::Photo.search("cats")
+    picture:          Faker::Placeholdit.image
   )
 end
