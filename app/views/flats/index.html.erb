@@ -6,27 +6,36 @@
   <div class="btn btn-primary">+ Add Flat</div>
 
 </nav>
-<h1>FLATS</h1>
+<div class="container">
+  <h1 class="h1 my-3 header">FLATS</h1>
 
-<div class="card-deck">
-  <% @flats.each do |flat| %>
-    <div class="card">
-      <img class="card-img-top" src="https://source.unsplash.com/random" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title"><%= flat.name %></h5>
-        <p class="card-text"><%= flat.address %></p>
-        <div class="container d-flex">
-          <p class="card-text ">
-            <i class="fas fa-user-friends px-2"></i><%= flat.number_of_guests %>
-          </p>
-          <p class="card-text ml-auto"><%= flat.price_per_night %>
-            <i class="fas fa-euro-sign"></i>
-          </p>
-        </div>
-      </div>
-      <div class="card-footer">
-        <small class="text-muted"><%= link_to 'more info' %></small>
-      </div>
-    </div>
-  <% end %>
 </div>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      <% @flats.each do |flat| %>
+        <div class="card my-4">
+          <img class="card-img-top" src="https://source.unsplash.com/random" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title"><%= flat.name %></h5>
+            <p class="card-text"><%= flat.address %></p>
+            <div class="container d-flex">
+              <p class="card-text ">
+                <i class="fas fa-user-friends px-2"></i><%= flat.number_of_guests %>
+              </p>
+              <p class="card-text ml-auto"><%= flat.price_per_night %>
+                <i class="fas fa-euro-sign"></i>
+              </p>
+            </div>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted"><%= link_to 'more info' %></small>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+
