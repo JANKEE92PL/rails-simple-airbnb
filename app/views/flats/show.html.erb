@@ -1,4 +1,14 @@
-<h1>hello</h1>
+<nav class="navbar navbar-light bg-light d-flex justify-content-between">
+
+  <div class="btn navbar-brand  d-inline-block align-top">
+    <%= link_to image_tag("airbnb-logo.png", width: "60px"), flats_path %>
+  </div>
+  <div>
+    <%= link_to '+ Add Flat', new_flat_path(@flat), class: "btn btn-primary" %>
+  </div>
+
+</nav>
+
 
 <div class="container">
   <div class="card w-50 mx-auto mt-4">
@@ -15,8 +25,9 @@
         </p>
       </div>
     </div>
-    <div class="card-footer">
-      <%= link_to 'Back to Flats', flats_path %>
+    <div class="card-footer d-flex">
+      <div><%= link_to 'Back to Flats', flats_path, class: "btn btn-outline-success" %></div>
+      <div class="ml-auto"><%= link_to 'Edit this Flat', edit_flat_path, class: "btn btn-outline-info " %></div>
     </div>
   </div>
 </div>

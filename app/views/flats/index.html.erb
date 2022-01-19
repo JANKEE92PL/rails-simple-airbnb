@@ -1,9 +1,11 @@
 <nav class="navbar navbar-light bg-light d-flex justify-content-between">
 
   <div class="btn navbar-brand  d-inline-block align-top">
-    <%= image_tag("airbnb-logo.png", width: "60px") %>
+    <%= link_to image_tag("airbnb-logo.png", width: "60px"), flats_path %>
   </div>
-  <%= link_to '+ Add Flat', new_flat_path(@flat), class: "btn btn-primary" %>
+  <div>
+    <%= link_to '+ Add Flat', new_flat_path(@flat), class: "btn btn-primary" %>
+  </div>
 
 </nav>
 <div class="container">
