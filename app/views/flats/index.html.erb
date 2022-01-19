@@ -7,7 +7,7 @@
 
 </nav>
 <div class="container">
-  <h1 class="h1 my-3 header">FLATS</h1>
+  <h1 class="h1 my-3 header">FLATS - <span>[<%= Flat.count %>]</span></h1>
 
 </div>
 
@@ -18,12 +18,12 @@
       <% @flats.each do |flat| %>
         <div class="card m-3 w-25">
           <img class="card-img-top" src="https://source.unsplash.com/random/?city,night" alt="Card image cap">
-          <div class="card-body">
+          <div class="card-body pb-0">
             <h5 class="card-title"><%= flat.name %></h5>
             <p class="card-text"><%= flat.address %></p>
-            <div class="container d-flex">
+            <div class="container d-flex p-0">
               <p class="card-text ">
-                <i class="fas fa-user-friends px-2"></i><%= flat.number_of_guests %>
+                <i class="fas fa-user-friends p-2"></i><%= flat.number_of_guests %>
               </p>
               <p class="card-text ml-auto"><%= flat.price_per_night %>
                 <i class="fas fa-euro-sign"></i>
