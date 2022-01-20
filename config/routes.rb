@@ -3,5 +3,4 @@ Rails.application.routes.draw do
   resources :flats
   delete "flats", to: "flats#destroy_all", as: :destroy_all
   get "flat", to: "flats#seed", as: :seed
-
 end
