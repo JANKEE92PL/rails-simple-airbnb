@@ -28,6 +28,7 @@
     <div class="card-footer d-flex">
       <div><%= link_to 'Back to Flats', flats_path, class: "btn btn-outline-success" %></div>
       <div class="ml-auto"><%= link_to 'Edit this Flat', edit_flat_path, class: "btn btn-outline-info " %></div>
+      <div class="ml-auto"><%= link_to 'Delete this Flat', flat_path, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-outline-danger " %></div>
     </div>
   </div>
 </div>

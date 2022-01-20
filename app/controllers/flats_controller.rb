@@ -30,6 +30,12 @@ class FlatsController < ApplicationController
     redirect_to flats_path(@flat)
   end
 
+  def destroy
+    @flat = Flat.find(params[:id])
+    @flat.destroy
+    redirect_to flats_path(@flat)
+  end
+
   private
 
   def find_flat
