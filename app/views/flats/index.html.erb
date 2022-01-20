@@ -1,10 +1,14 @@
-<nav class="navbar navbar-light bg-light d-flex justify-content-between">
+<nav class="navbar sticky-top navbar-light bg-light d-flex justify-content-between">
 
   <div class="btn navbar-brand  d-inline-block align-top">
     <%= link_to image_tag("airbnb-logo.png", width: "60px"), flats_path %>
   </div>
   <div>
-    <%= link_to '+ Add Flat', new_flat_path(@flat), class: "btn btn-primary" %>
+    <%= link_to 'Delete all Flats', destroy_all_path, method: :delete, data: { confirm: "Are you really sure?" }, class: "btn btn-outline-danger " %>
+
+    <%= link_to '+ Add Flat', new_flat_path(@flat), class: "btn btn-primary ml-auto" %>
+
+    <%= link_to 'Seed', seed_path ,class: "btn btn-info ml-auto" %>
   </div>
 
 </nav>

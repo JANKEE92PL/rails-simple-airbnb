@@ -36,6 +36,17 @@ class FlatsController < ApplicationController
     redirect_to flats_path(@flat)
   end
 
+  def destroy_all
+    @flat = Flat.all
+    @flat.destroy_all
+    redirect_to flats_path(@flat)
+  end
+
+  def seed
+    Rails.application
+    redirect_to flats_path(@flat)
+  end
+
   private
 
   def find_flat
