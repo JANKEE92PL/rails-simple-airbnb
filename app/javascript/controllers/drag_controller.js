@@ -20,6 +20,6 @@ export default class extends Controller {
     }
 
     end(event) {
-        console.log(event)
+        Rails.ajax()
     }
 }
