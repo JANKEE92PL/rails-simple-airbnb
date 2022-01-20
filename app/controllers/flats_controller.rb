@@ -47,6 +47,12 @@ class FlatsController < ApplicationController
     redirect_to flats_path(@flat)
   end
 
+  def move
+    @flat = Flat.find(params[:id])
+    @flat.insert_at(params[:position].to_i)
+    head :ok
+  end
+
   private
 
   def find_flat
@@ -54,6 +60,6 @@ class FlatsController < ApplicationController
   end
 
   def flat_params
-    params.require(:flat).permit(:name, :address, :description, :price_per_night, :number_of_guests, :picture)
+    params.require(:flat).permit(:name, :address, :description, :price_per_night, :number_of_guests, :picture, :position)
   end
 end

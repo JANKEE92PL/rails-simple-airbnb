@@ -20,9 +20,9 @@
 
 <div class="container">
   <div class="row">
-    <div class="row col-xs-2 justify-content-between" data-controller="drag">
-      <% @flats.each do |flat| %>
-        <div class="card m-3 w-25">
+    <div class="row col-xs-2 justify-content-between" data-controller="drag" data-drag-url="/flats/:id">
+      <% @flats.order(position: :asc).each do |flat| %>
+        <div class="card m-3 w-25" data-id="<%= flat.id %>">
           <img class="card-img-top" src="<%= flat.picture %>" alt="Card image cap">
           <div class="card-body pb-0">
             <h5 class="card-title"><%= flat.name %></h5>
