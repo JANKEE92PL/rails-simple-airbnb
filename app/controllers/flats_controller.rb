@@ -43,7 +43,7 @@ class FlatsController < ApplicationController
   end
 
   def seed
-    Rails.application
+    Rails.application.load_seed
     redirect_to flats_path(@flat)
   end
 

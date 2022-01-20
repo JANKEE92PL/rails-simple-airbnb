@@ -6,9 +6,9 @@
   <div>
     <%= link_to 'Delete all Flats', destroy_all_path, method: :delete, data: { confirm: "Are you really sure?" }, class: "btn btn-outline-danger " %>
 
-    <%= link_to '+ Add Flat', new_flat_path(@flat), class: "btn btn-primary ml-auto" %>
+    <%= link_to 'Seed', seed_path(@flats), class: "btn btn-outline-warning ml-auto" %>
 
-    <%= link_to 'Seed', seed_path ,class: "btn btn-info ml-auto" %>
+    <%= link_to '+ Add Flat', new_flat_path(@flat), class: "btn btn-primary ml-auto" %>
   </div>
 
 </nav>
