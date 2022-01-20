@@ -20,9 +20,9 @@
 
 <div class="container">
   <div class="row">
-    <div class="row col-xs-2 justify-content-between">
+    <div class="row col-xs-2 justify-content-between" data-controller="drag">
       <% @flats.each do |flat| %>
-        <div class="card m-3 w-25" data-controller="drag">
+        <div class="card m-3 w-25">
           <img class="card-img-top" src="<%= flat.picture %>" alt="Card image cap">
           <div class="card-body pb-0">
             <h5 class="card-title"><%= flat.name %></h5>
@@ -44,10 +44,3 @@
     </div>
   </div>
 </div>
-
-<ul>
-  <li>One</li>
-  <li>Two</li>
-  <li>Three</li>
-</ul>
-

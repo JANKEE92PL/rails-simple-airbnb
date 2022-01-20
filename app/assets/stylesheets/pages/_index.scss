@@ -1,2 +1,11 @@
 // Import page-specific CSS files here.
 @import "home";
+
+.ghost-background-class {
+  background: rgba(105, 105, 105, 0.4);
+}
+
+.selected {
+  background-color: #f9c7c8;
+  border: solid red 1px;
+}
