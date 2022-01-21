@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   root to: "flats#index"
-
+  resources :flats
   resources :flats do
     member do
       patch :move
